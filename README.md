@@ -1,16 +1,16 @@
 # ansible-network
-ansible-network-core/
-│
-├── inventory/
-│   ├── hosts.yaml         <-- Daftar IP perangkat dan grupnya
-│   └── group_vars/
-│       └── all.yaml       <-- Variabel global (Username, Password, Secret)
-│
-├── playbooks/
-│   ├── run_command.yaml   <-- Kode untuk menjalankan perintah 'show'
-│   └── backup_config.yaml <-- Kode untuk mengambil & backup konfigurasi
-│
-└── ansible.cfg            <-- File konfigurasi utama Ansible
+ansible-network-core/  
+│  
+├── inventory/  
+│   ├── hosts.yaml         <-- Daftar IP perangkat dan grupnya  
+│   └── group_vars/  
+│       └── all.yaml       <-- Variabel global (Username, Password, Secret)  
+│  
+├── playbooks/  
+│   ├── run_command.yaml   <-- Kode untuk menjalankan perintah 'show'  
+│   └── backup_config.yaml <-- Kode untuk mengambil & backup konfigurasi  
+│  
+└── ansible.cfg            <-- File konfigurasi utama Ansible  
 
 # Cara Menjalankan Ansible Ini:
 - Pastikan Anda sudah menginstal Ansible di komputer/server Anda (Ansible paling optimal berjalan di Linux/macOS/WSL Windows):
