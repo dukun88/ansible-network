@@ -1,0 +1,14 @@
+---
+- name: Backup Otomatis Konfigurasi Cisco
+  hosts: cisco_devices
+  gather_facts: no
+
+  tasks:
+    - name: Ambil running-config saat ini
+      cisco.ios.ios_facts:
+        gather_subset: config
+
+    - name: Simpan konfigurasi ke dalam folder lokal
+      copy:
+        content: "{{ ansible_net_config }}"
+        dest: "../backup-{{ inventory_hostname }}.txt"
