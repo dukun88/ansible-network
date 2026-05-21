@@ -1,0 +1,15 @@
+---
+- name: Kelola MikroTik via Ansible
+  hosts: mikrotik_devices
+  gather_facts: no
+
+  tasks:
+    # Menggunakan SSH CLI
+    - name: Ambil informasi IP Address MikroTik
+      community.routeros.command:
+        commands: /ip address print
+      register: mikrotik_output
+
+    - name: Tampilkan Hasil
+      debug:
+        msg: "{{ mikrotik_output.stdout_lines[0] }}"
