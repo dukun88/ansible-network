@@ -1,0 +1,1 @@
+Di dunia nyata, file all.yaml ini biasanya dienkripsi menggunakan perintah ansible-vault agar password-password di dalamnya tidak bisa dibaca secara teks mentah oleh orang lain.
