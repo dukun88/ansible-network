@@ -1,0 +1,11 @@
+# Kredensial untuk koneksi SSH Jaringan
+ansible_user: "admin"
+ansible_password: "SuperPassword123"
+
+# Variabel khusus untuk menyalakan fitur "enable mode" di Cisco
+ansible_become: yes
+ansible_become_method: enable
+ansible_become_password: "EnablePassword123"
+
+# Mengganti koneksi default dari lokal ke network_cli (khusus perangkat jaringan)
+ansible_connection: network_cli
