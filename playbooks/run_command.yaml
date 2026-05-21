@@ -1,0 +1,14 @@
+---
+- name: Menjalankan Perintah Show di Perangkat Cisco
+  hosts: cisco_devices  # Menargetkan grup cisco yang ada di inventory
+  gather_facts: no      # Tidak perlu mengumpulkan facts standar Linux
+
+  tasks:
+    - name: Eksekusi perintah show ip interface brief
+      cisco.ios.ios_command:
+        commands: show ip interface brief
+      register: command_output # Menyimpan hasil ke dalam variabel
+
+    - name: Tampilkan hasil ke Layar/Terminal
+      debug:
+        msg: "{{ command_output.stdout_lines[0] }}"
