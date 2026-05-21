@@ -1,0 +1,1 @@
+Playbook ini menggunakan modul bawaan Ansible untuk menjalankan perintah ke Cisco. juga modul sendiri miktorik Jika Anda punya Juniper , Anda tinggal membuat task terpisah yang menggunakan modul junipernetworks.junos.junos_command.
