@@ -1,0 +1,22 @@
+all:
+  children:
+    cisco_devices:
+      hosts:
+        Router-Core-Jakarta:
+          ansible_host: 192.168.1.254
+          ansible_network_os: cisco.ios.ios
+        Switch-Layer2-Sby:
+          ansible_host: 10.0.0.5
+          ansible_network_os: cisco.ios.ios
+
+    juniper_devices:
+      hosts:
+        Juniper-Edge:
+          ansible_host: 172.16.10.1
+          ansible_network_os: junipernetworks.junos.junos
+
+    mikrotik_devices:
+      hosts:
+        Mikrotik-Kantor:
+          ansible_host: 192.168.88.1
+          ansible_network_os: community.routeros.routeros
